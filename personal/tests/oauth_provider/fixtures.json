@@ -1,0 +1,10 @@
+{
+  "numeric_no_email": {"id": 900001, "username": "fixture_user"},
+  "numeric_null_email": {"id": 900001, "username": "fixture_user", "email": null},
+  "numeric_unverified_email": {"id": 900001, "username": "fixture_user", "email": "synthetic@example.invalid", "email_verified": false},
+  "numeric_unstated_verification": {"id": 900001, "username": "fixture_user", "email": "synthetic@example.invalid"},
+  "string_id": {"id": "900001", "username": "fixture_user", "email": "synthetic@example.invalid", "email_verified": false},
+  "renamed_user": {"id": 900001, "username": "renamed_fixture", "email": "synthetic@example.invalid", "email_verified": false},
+  "same_email_other_id": {"id": 900002, "username": "another_fixture", "email": "synthetic@example.invalid", "email_verified": false},
+  "same_username_other_id": {"id": 900002, "username": "fixture_user", "email": "other@example.invalid", "email_verified": false}
+}

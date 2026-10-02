@@ -1,0 +1,26 @@
+name: Personal OAuth Fixture Contracts
+
+on:
+  pull_request:
+    branches: [personal]
+    paths:
+      - 'personal/**'
+      - '.github/workflows/personal-oauth-contracts.yaml'
+  push:
+    branches: [personal]
+    paths:
+      - 'personal/**'
+      - '.github/workflows/personal-oauth-contracts.yaml'
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-provider:
+    name: Synthetic provider transport (not Rauthy integration)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run isolated standard-library fixture tests
+        run: python3 -m unittest discover -s personal/tests/oauth_provider -v
